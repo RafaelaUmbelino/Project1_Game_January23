@@ -1,0 +1,15 @@
+
+body{
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+
+}
+
+body button{
+    font-size: 40px;
+    background-color:deepskyblue;
+    color: white;
+    
+}
