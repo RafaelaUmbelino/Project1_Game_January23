@@ -1,23 +1,24 @@
 /** @type {HTMLCanvasElement} */
 
 class Component{
-  constructor(x, y, w, h, color, ctx){ //Why doesn't it work without color?
+  constructor(x, y, w, h, ctx){ //Why doesn't it work without color?
   this.x = x;
   this.y = y;
   this.w = w;
   this.h = h;
-  this.color = color;
   this.ctx = ctx;
   this.speedX = 0;
   this.speedY = 0;
+  this.img = new Image();
+  this.img.src = "../docs/assets/Player.png"
   
   
   }
 
   draw(){
-    this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(this.x, this.y, this.w, this.h);  //draws rectangle wherever we want, we update the values while square moves.
-
+    /* this.ctx.fillStyle = this.color;
+    this.ctx.fillRect(this.x, this.y, this.w, this.h);  */ //draws rectangle wherever we want, we update the values while square moves.
+    this.ctx.drawImage (this.img, this.x, this.y, this.w, this.h)
   }
 
   newPos(){

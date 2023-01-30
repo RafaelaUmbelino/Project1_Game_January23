@@ -36,3 +36,18 @@ class Enemy{
         return this.x + this.w;
       }
   }
+
+  class Cone extends Enemy{
+    constructor(ctx){
+      super(ctx)
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.color = color;
+    this.ctx = ctx;
+    this.speedx = 0;
+    this.speedy = 0;
+    };
+
+  }
