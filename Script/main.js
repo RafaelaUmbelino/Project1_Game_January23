@@ -6,9 +6,9 @@ const ctx = canvas.getContext('2d');
 
 const startButton = document.getElementById("start-button");
 
-const player = new Component(220, 550, 50, 100, "Image", ctx)
+const player = new Component(0, 0, 500, 500, "red", ctx);
 
-startButton.onclick = function(){
+start.onclick = function(){
     const game = new Game(ctx, 700, 800, player)
 
     game.start();

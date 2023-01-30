@@ -10,8 +10,6 @@ class Game {
       this.intervalId = null;
       this.frames = 0;
       this.enemies = [];
-      this.score = 0;
-      this.backgroundImage = new Image ();
     }
  
     start() {
@@ -33,8 +31,7 @@ class Game {
   }
 
   clear(){
-      this.backgroundImage.src = "../docs/assets/sidewalk.png";
-      this.ctx.drawImage(this.backgroundImage, 0, 0, this.width, this.height);
+    this.ctx.clearRect(0, 0, this.width, this.height);
   }
 
   updateEnemies(){

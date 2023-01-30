@@ -10,13 +10,13 @@ class Component{
   this.ctx = ctx;
   this.speedX = 0;
   this.speedY = 0;
-  this.img = new Image();
-  this.img.src = "/docs/assets/Player.png"
-
+  
+  
   }
 
   draw(){
-     this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h); //draws rectangle wherever we want, we update the values while square moves.
+    this.ctx.fillStyle = this.color;
+    this.ctx.fillRect(this.x, this.y, this.w, this.h);  //draws rectangle wherever we want, we update the values while square moves.
 
   }
 
