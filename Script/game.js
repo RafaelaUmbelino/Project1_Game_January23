@@ -59,7 +59,7 @@ timer(){
  
 ctx.font = "32px Helvetica";
 ctx.fillStyle = "black";
-ctx.fillText(`Timer ${this.time}`, 100, 100);
+ctx.fillText(`Timer ${this.time}`, 500, 30);
 }
 
 checkWin(){
