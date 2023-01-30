@@ -20,24 +20,24 @@ document.addEventListener("keydown", (e) => {
         
         case "ArrowUp": 
         if(player.y > 0){
-        player.y -= 50
+        player.y -= 40
         }
         break;
   
         case "ArrowDown": 
-        if(player.y + player.h < 700){
+        if(player.y + player.h < 600){
         player.y += 50
         }
         break;
 
         case "ArrowLeft": 
         if(player.x > 0){
-        player.x -= 50
+        player.x -= 40
         }
         break;
   
         case "ArrowRight": 
-        if(player.x + player.w < 700){
+        if(player.x + player.w < 600){
         player.x += 50
         }
         break;
@@ -47,22 +47,3 @@ document.addEventListener("keydown", (e) => {
     }
 
   })
-  
-/*   document.addEventListener("keyup", () => {
-    switch(e.code){
-
-
-      case "Space":
-        player.speedY = 0;
-
-      break;
-    
-
-
-  }
-    player.speedX = 0;
-    p
-   
-  
-  
-  }) */

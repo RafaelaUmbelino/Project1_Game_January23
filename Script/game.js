@@ -12,8 +12,10 @@ class Game {
       this.frames = 0;
       this.enemiesLeft = [];
       this.enemiesRight = [];
+      this.cone = [];
       this.score = 0;
       this.time = 60;
+      this.backgroundImage = new Image();
     }
 
     start() {
@@ -40,7 +42,12 @@ class Game {
   }
 
   clear(){
-    this.ctx.clearRect(0, 0, this.width, this.height);
+    this.backgroundImage.onload
+    this.backgroundImage.src = "../docs/assets/Highway 3.png";
+     this.ctx.drawImage(this.backgroundImage, 0, 0, this.width, this.height);
+
+    //this.ctx.clearRect(0, 0, this.width, this.height);
+    //this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
   }
 
   updateScore() {
@@ -59,7 +66,7 @@ timer(){
  
 ctx.font = "32px Helvetica";
 ctx.fillStyle = "black";
-ctx.fillText(`Timer ${this.time}`, 500, 30);
+ctx.fillText(`Timer ${this.time}`, 400, 30);
 }
 
 checkWin(){
@@ -81,14 +88,23 @@ checkWin(){
     for(let i = 0; i < this.enemiesRight.length; i++ ){
         this.enemiesRight[i].x -= 1;
         this.enemiesRight[i].draw();
+
+    }
+
+    for(let i = 0; i < this.enemiesRight.length; i++ ){
+        this.cone[i].y += 1;
+        this.cone[i].draw();
     
      
   }
      let randomY = Math.floor(Math.random() * 350 - 30) + 30;
      let randomY2 = Math.floor(Math.random() * 700 - 350) + 350;
+     let randomX = Math.floor(Math.random() * 700 - 350) + 350;
+     
       if(this.frames % 120 === 0){
-          this.enemiesLeft.push(new Enemy(0, randomY, 30, 30, "orange", this.ctx));
-          this.enemiesRight.push(new Enemy(650, randomY2, 30, 30, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
+          this.enemiesLeft.push(new Enemy(0, randomY, 40, 60, "orange", this.ctx));
+          this.enemiesRight.push(new Enemy(650, randomY2, 40, 60, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
+          this.cone.push(new Cone(randomX, 50, 30, 30, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
       
   }
 }

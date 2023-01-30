@@ -1,7 +1,7 @@
 /** @type {HTMLCanvasElement} */
 
 class Component{
-  constructor(x, y, w, h, ctx){ //Why doesn't it work without color?
+  constructor(x, y, w, h, ctx){
   this.x = x;
   this.y = y;
   this.w = w;

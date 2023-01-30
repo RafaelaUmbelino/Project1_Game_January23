@@ -11,13 +11,12 @@ class Enemy{
     this.ctx = ctx;
     this.speedx = 0;
     this.speedy = 0;
-
+    this.img = new Image ();
+    this.img.src = "../docs/Image game 1/car_game.png";
     }
 
     draw(){ // To draw the enemy (rectangle)
-        this.ctx.fillStyle = this.color;
-        this.ctx.fillRect(this.x, this.y, this.w, this.h);
-
+      this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
     }
     newPosition(){ // to update the enemies position
         this.x += this.speedx;
@@ -38,7 +37,7 @@ class Enemy{
   }
 
   class Cone extends Enemy{
-    constructor(ctx){
+    constructor(x, y, w, h, color, ctx){
       super(ctx)
     this.x = x;
     this.y = y;
@@ -48,6 +47,8 @@ class Enemy{
     this.ctx = ctx;
     this.speedx = 0;
     this.speedy = 0;
+    this.img = new Image ();
+    this.img.src ="../docs/assets/Cone.png"
     };
 
   }
