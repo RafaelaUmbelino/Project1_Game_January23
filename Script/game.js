@@ -43,7 +43,7 @@ class Game {
 
   clear(){
     this.backgroundImage.onload
-    this.backgroundImage.src = "../docs/assets/backgroundGameCity.webp";
+    this.backgroundImage.src = "../docs/assets/Captura de ecrã 2023-01-31, às 13.17.58.png";
      this.ctx.drawImage(this.backgroundImage, 0, 0, this.width, this.height);
 
     //this.ctx.clearRect(0, 0, this.width, this.height);
