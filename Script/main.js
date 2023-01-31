@@ -6,7 +6,7 @@ const ctx = canvas.getContext('2d');
 
 const startButton = document.getElementById("start-button");
 
-const player = new Component(300, 600, 100, 100, ctx); //(x, y, w, h, color, ctx)
+const player = new Component(300, 600, 90, 90, ctx); //(x, y, w, h, color, ctx)
 
 start.onclick = function(){
     const game = new Game(ctx, 700, 800, player)
@@ -20,7 +20,7 @@ document.addEventListener("keydown", (e) => {
         
         case "ArrowUp": 
         if(player.y > 0){
-        player.y -= 40
+        player.y -= 50
         }
         break;
   
@@ -37,7 +37,7 @@ document.addEventListener("keydown", (e) => {
         break;
   
         case "ArrowRight": 
-        if(player.x + player.w < 600){
+        if(player.x + player.w < 700){
         player.x += 50
         }
         break;

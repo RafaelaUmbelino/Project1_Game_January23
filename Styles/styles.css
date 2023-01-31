@@ -1,14 +1,45 @@
 
+.backgroundImage{
+  
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
 
-body {
+  background: url(/docs/assets/BackgroundWithIronhackLogo.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+
+}
+
+  .game-intro {
+    
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: flex-start;
+
+  }
+  
+  .arrows{
+   float: left;
+   padding: 0% 5%;
+
+  }
+  
+  body {
     padding: 0;
     text-align: center;
   }
   
-  .game-intro {
-    float: left;
-    padding: 0% 10%;
-  }
+
   
   .game-intro p {
     font-size: 18px;
@@ -16,7 +47,10 @@ body {
   }
   
   .logo-img {
-    width: 350px;
+    width: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
   }
   
   .arrows-img {
@@ -25,12 +59,12 @@ body {
   
   body button {
     font-size: 30px;
-    background-color: #1308ea;
+    background-color: #870007;
     color: #fff;
     padding: 20px 40px;
     border: 0;
     box-shadow: 0;
-    border-radius: 5px;
+    border-radius: 1px;
     margin-bottom: 20px;
   }
   
@@ -38,4 +72,19 @@ body {
       float: left;
       padding: 20px 0px;
   }
-  
+
+  .backgroundImage p{
+    font-weight: bold;
+    
+  }
+
+  .game-intro{
+    background-color: white;
+    background-clip: content-box;
+   float: left;
+  }
+
+  .introduction{
+    margin-bottom: 60px;
+    margin-top: 0px;
+  }

@@ -12,7 +12,7 @@ class Enemy{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src = "../docs/Image game 1/car_game.png";
+    this.img.src = "../docs/Image game 1/car_game - cópia.png"
     }
 
     draw(){ // To draw the enemy (rectangle)

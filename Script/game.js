@@ -43,7 +43,7 @@ class Game {
 
   clear(){
     this.backgroundImage.onload
-    this.backgroundImage.src = "../docs/assets/Highway 3.png";
+    this.backgroundImage.src = "../docs/assets/backgroundGameCity.webp";
      this.ctx.drawImage(this.backgroundImage, 0, 0, this.width, this.height);
 
     //this.ctx.clearRect(0, 0, this.width, this.height);
@@ -72,6 +72,7 @@ ctx.fillText(`Timer ${this.time}`, 400, 30);
 checkWin(){
   if(this.time <= 0){
     this.stop()
+    this.youWon()
 
   }
 }
@@ -131,7 +132,7 @@ checkWin(){
     }
   }
 
-  /*youWon(){
+  youWon(){
     ctx.fillStyle = "black";
     ctx.fillRect(50, 200, 400, 250);
     ctx.font = "32px Helvetica";
@@ -142,5 +143,5 @@ checkWin(){
     ctx.fillText(`${this.score}`, 230, 400);
     this.stop();
 
-  }*/
+  }
 }
