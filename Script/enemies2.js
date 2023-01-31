@@ -1,6 +1,6 @@
 /** @type {HTMLCanvasElement} */
 
-class Enemy{
+class Enemy2{
     constructor(x, y, w, h, color, ctx) {
 
     this.x = x;
@@ -12,7 +12,7 @@ class Enemy{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src = "../docs/Imagegame1/cargame.png"
+    this.img.src = "../docs/assets/Player.png";
     }
 
     draw(){ // To draw the enemy (rectangle)
@@ -36,7 +36,7 @@ class Enemy{
       }
   }
 
-  class Cone extends Enemy{
+  class Cone2 extends Enemy2{
     constructor(x, y, w, h, color, ctx){
       super(ctx)
     this.x = x;
@@ -48,7 +48,7 @@ class Enemy{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src ="../docs/assets/Cone.png"
+    this.img.src ="../docs/assets/Cone.png";
     };
 
   }

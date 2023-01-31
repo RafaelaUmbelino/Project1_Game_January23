@@ -4,15 +4,52 @@ const canvas = document.getElementById("canvas")
 
 const ctx = canvas.getContext('2d');
 
-const startButton = document.getElementById("start-button");
+const startButton = document.getElementById("start");
+const startButton2 = document.getElementById("player2start");
 
-const player = new Component(600, 350, 90, 90, ctx); //(x, y, w, h, color, ctx)
 
-start.onclick = function(){
-    const game = new Game(ctx, 700, 600, player)
+
+let player;
+let game;
+
+
+
+startButton.onclick = () => {
+     player = new Component(600, 350, 90, 90, ctx);  //(x, y, w, h, color, ctx)
+     game = new Game(ctx, 700, 600, player)
 
     game.start();
 }
+
+startButton2.onclick = () => {
+     player = new Component2(600, 350, 90, 90, ctx); //(x, y, w, h, color, ctx)
+     game = new Game2(ctx, 700, 600, player)
+
+    game.start();
+}
+
+/* function start1() {
+    game.start();
+    player = player
+} 
+
+ function start2() {
+  game2.start();
+  player = player2
+}
+ */
+/* function start1() {
+    
+    game.start();
+    player = new Component(600, 350, 90, 90, ctx);
+} 
+
+function start2() {
+   
+    game.start();
+    player = new Component2(600, 350, 90, 90, ctx);
+    
+} */
 
 document.addEventListener("keydown", (e) => {
     switch(e.code){
@@ -47,3 +84,36 @@ document.addEventListener("keydown", (e) => {
     }
 
   })
+/* document.addEventListener("keydown", (e) => {
+    switch(e.code){
+  
+        
+        case "ArrowUp": 
+        if(player2.y > 0){
+        player2.y -= 50
+        }
+        break;
+  
+        case "ArrowDown": 
+        if(player2.y + player2.h < 560){
+        player2.y += 50
+        }
+        break;
+
+        case "ArrowLeft": 
+        if(player2.x > 0){
+        player2.x -= 40
+        }
+        break;
+  
+        case "ArrowRight": 
+        if(player2.x + player2.w < 660){
+        player2.x += 50
+        }
+        break;
+
+  
+  
+    }
+
+  }) */
