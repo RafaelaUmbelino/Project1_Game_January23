@@ -22,7 +22,7 @@ startButton.onclick = () => {
 }
 
 startButton2.onclick = () => {
-     player = new Component2(600, 350, 90, 90, ctx); //(x, y, w, h, color, ctx)
+     player = new Component2(600, 350, 45, 75, ctx); //(x, y, w, h, color, ctx)
      game = new Game2(ctx, 700, 600, player)
 
     game.start();

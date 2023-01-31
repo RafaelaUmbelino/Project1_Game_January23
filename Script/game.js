@@ -123,13 +123,14 @@ checkWin(){
     });
 
     if (crashedR || crashedL || crashedC) {
-      this.stop();
-      ctx.fillStyle = "black";
+      this.stop()
+      ctx.globalAlpha = 0.8;
+      ctx.fillStyle = "white";
       ctx.fillRect(50, 200, 400, 250);
       ctx.font = "32px Helvetica";
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "black";
       ctx.fillText(`GAME OVER`, 150, 300);
-      ctx.fillStyle = "white";
+      ctx.fillStyle = "orange";
       ctx.fillText(`Your final score`, 135, 350);
       ctx.fillText(`${this.score}`, 230, 400);
     }
