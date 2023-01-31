@@ -53,13 +53,12 @@
   .game-intro p {
     font-size: 18px;
     font-family: "Verdana";
-    margin: 10px
+    margin-top: -10px;
   }
   
   .logo-img {
     width: 250px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
    
   }
   
@@ -71,18 +70,23 @@
     font-size: 20px;
     background-color: #2E266D;
     color: #fff;
-    padding: 20px 30px;
+    padding: 10px 30px;
     border: 0;
     box-shadow: 0;
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-top: -5px;
     
     
   }
   .buttonsContainer{
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
+  }
+
+  #player2start{
+    margin-top: px;
   }
   
   #game-board {
@@ -93,5 +97,9 @@
   .backgroundImage p{
     font-weight: bold;
     
+  }
+
+  #or{
+    font-size: x-large;
   }
 
