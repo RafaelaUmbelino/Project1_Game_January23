@@ -27,19 +27,19 @@ class Component{
   }
 
   top(){
-      return this.y;
+      return this.y - 3;
   }
 
   bottom(){
-      return this.y + this.h; //for the bottom, it's y plus the whole square.
+      return this.y + (this.h - 9); //for the bottom, it's y plus the whole square.
   }
 
   left(){
-      return this.x;
+      return this.x - 3;
   }
   
   right(){
-      return this.x + this.w; 
+      return this.x + (this.w - 8); 
   }
 
   crashWith(enemy){ // if we colide with any of the enemies sides it returns false

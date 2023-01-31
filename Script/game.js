@@ -98,9 +98,9 @@ checkWin(){
     
      
   }
-     let randomY = Math.floor(Math.random() * 350 - 30) + 30;
-     let randomY2 = Math.floor(Math.random() * 700 - 350) + 350;
-     let randomX = Math.floor(Math.random() * 700 - 350) + 350;
+     let randomY = Math.floor(Math.random() * 300 - 25) + 25;
+     let randomY2 = Math.floor(Math.random() * 600 - 300) + 300;
+     let randomX = Math.floor(Math.random() * 600 - 300) + 300;
      
       if(this.frames % 120 === 0){
           this.enemiesLeft.push(new Enemy(0, randomY, 40, 60, "orange", this.ctx));
