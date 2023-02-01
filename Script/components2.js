@@ -50,4 +50,12 @@ class Component2{
           this.left() > enemy.right()
       );
   }
+  crashWith(coin){ // if we colide with any of the enemies sides it returns false
+      return !(
+          this.bottom() < coin.top() || 
+          this.top() > coin.bottom() ||
+          this.right() < coin.left() ||
+          this.left() > coin.right()
+      );
+  }
 }

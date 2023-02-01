@@ -13,8 +13,8 @@ let paragraph = document.getElementById("or");
 let player;
 let game;
 
-const myAudio = document.getElementById("myAudio");
-const buttons = document.getElementsByTagName("audio");
+const myAudio = document.getElementById("myAudio").play();
+
 
 
 startButton.onclick = () => {

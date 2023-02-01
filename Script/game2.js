@@ -15,7 +15,7 @@ class Game2 {
       this.cone = [];
       this.score = 0;
       this.time = 60;
-      //this.coin = [];
+      this.coin = [];
       this.backgroundImage = new Image();
     }
 
@@ -28,7 +28,7 @@ class Game2 {
       this.frames++;
       this.clear();
       this.updateEnemies();
-      //this.updateCoin();
+      this.updateCoin();
       this.player.newPos(); // Step 30
       this.player.draw();
       this.timer();
@@ -59,6 +59,18 @@ class Game2 {
     ctx.font = "30px Helvetica";
     ctx.fillStyle = "black";
     ctx.fillText(`Score: ${this.score}`, 80, 30);
+    const crashedCoin = this.coin.some((coin) => {
+      return this.player.crashWith(coin);
+    });
+    if (crashedCoin){
+      for(let i=0; i<this.coin.length; i++){
+        this.coin.splice(i, 1);
+        
+      }
+      
+      this.score += 5;
+
+    }
   }
  
 timer(){
@@ -111,20 +123,20 @@ checkWin(){
       
   }
 }
-//  updateCoin(){
+ updateCoin(){
   
-//   for(let i = 0; i < this.coin.length; i++ ){
-//     this.coin[i].y += 1;
-//     this.coin[i].draw();
-// }
+  for(let i = 0; i < this.coin.length; i++ ){
+    this.coin[i].y += 1;
+    this.coin[i].draw();
+}
 
-//   let randomX = Math.floor(Math.random() * 600 - 300) + 300;
+  let randomX = Math.floor(Math.random() * 600 - 300) + 300;
 
-//   if(this.frames % 120 === 0){
-//   this.coin.push(new Coin(randomX, 50, 40, 40, "blue", this.ctx));
+  if(this.frames % 120 === 0){
+  this.coin.push(new Coin(randomX, 50, 40, 40, "blue", this.ctx));
 
-//  }
-// }
+ }
+}
 
 
   
