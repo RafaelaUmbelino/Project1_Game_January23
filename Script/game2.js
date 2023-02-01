@@ -105,7 +105,7 @@ checkWin(){
       if(this.frames % 120 === 0){
           this.enemiesLeft.push(new Enemy2(0, randomY, 40, 60, "orange", this.ctx));
           this.enemiesRight.push(new Enemy2(650, randomY2, 40, 60, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
-          this.cone.push(new Cone2(randomX, 50, 30, 30, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
+          this.cone.push(new Cone2(randomX, 50, 40, 40, "blue", this.ctx)); //x, y, w, h, color, ctx, Image)
       
   }
 }

@@ -7,16 +7,15 @@ const ctx = canvas.getContext('2d');
 let startButton = document.getElementById("start");
 let startButton2 = document.getElementById("player2start");
 let restartButton = document.getElementById("restartButton").style.display= 'none';
-
+let paragraph = document.getElementById("or");
 
 
 let player;
 let game;
 
 
-
 startButton.onclick = () => {
-     player = new Component(600, 500, 90, 90, ctx);  //(x, y, w, h, color, ctx)
+     player = new Component(600, 500, 50, 60, ctx);  //(x, y, w, h, color, ctx)
      game = new Game(ctx, 700, 600, player)
 
     game.start();
@@ -33,6 +32,7 @@ function showButton(){
     restartButton = document.getElementById('restartButton').style.display='block';
     startButton = document.getElementById("start").style.display= 'none';
     startButton2 = document.getElementById("player2start").style.display= 'none';
+    paragraph = document.getElementById("or").style.display= 'none';
     }
 
 

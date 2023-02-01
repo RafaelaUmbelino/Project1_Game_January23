@@ -48,7 +48,7 @@ class Enemy2{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src ="../docs/assets/Cone.png";
+    this.img.src ="../docs/assets/constructionHelmet.png"
     };
 
   }
