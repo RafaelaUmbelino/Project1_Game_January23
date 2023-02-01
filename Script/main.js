@@ -8,18 +8,35 @@ let startButton = document.getElementById("start");
 let startButton2 = document.getElementById("player2start");
 let restartButton = document.getElementById("restartButton").style.display= 'none';
 let paragraph = document.getElementById("or");
-
+let instructions = document.getElementById("collectCoins").style.display= 'none';
+let walkInstructions = document.getElementById("walkInstructions").style.display= 'none';
 
 let player;
 let game;
 
 const myAudio = document.getElementById("myAudio").play();
+var button = document.getElementById("button");
+var audio = document.getElementById("player");
 
+button.addEventListener("click", function(){
+  if(audio.paused){
+    audio.play();
+    button.innerHTML = "Pause";
+  } else {
+    audio.pause();
+    button.innerHTML = "Play";
+  }
+});
 
 
 startButton.onclick = () => {
      player = new Component(600, 500, 50, 60, ctx);  //(x, y, w, h, color, ctx)
      game = new Game(ctx, 700, 600, player)
+     startButton = document.getElementById("start").style.display= 'none';
+     startButton2 = document.getElementById("player2start").style.display= 'none';
+     paragraph = document.getElementById("or").style.display= 'none';
+     walkInstructions = document.getElementById("walkInstructions").style.display='block';
+
 
     game.start();
 }
@@ -27,6 +44,12 @@ startButton.onclick = () => {
 startButton2.onclick = () => {
      player = new Component2(600, 500, 45, 75, ctx); //(x, y, w, h, color, ctx)
      game = new Game2(ctx, 700, 600, player)
+     startButton = document.getElementById("start").style.display= 'none';
+     startButton2 = document.getElementById("player2start").style.display= 'none';
+     paragraph = document.getElementById("or").style.display= 'none';
+     instructions = document.getElementById("collectCoins").style.display='block';
+
+
 
     game.start();
 }
@@ -37,6 +60,8 @@ function showButton(){
     startButton2 = document.getElementById("player2start").style.display= 'none';
     paragraph = document.getElementById("or").style.display= 'none';
     }
+
+
 
 
 

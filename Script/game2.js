@@ -65,7 +65,7 @@ class Game2 {
     if (crashedCoin){
       for(let i=0; i<this.coin.length; i++){
         this.coin.splice(i, 1);
-        
+
       }
       
       this.score += 5;
@@ -130,7 +130,7 @@ checkWin(){
     this.coin[i].draw();
 }
 
-  let randomX = Math.floor(Math.random() * 600 - 300) + 300;
+  let randomX = Math.floor(Math.random() * 600 - 250) + 250;
 
   if(this.frames % 120 === 0){
   this.coin.push(new Coin(randomX, 50, 40, 40, "blue", this.ctx));
