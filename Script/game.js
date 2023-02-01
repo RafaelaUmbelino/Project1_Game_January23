@@ -51,7 +51,7 @@ class Game {
   }
 
   updateScore() {
-    if (this.frames % 10 === 0) {
+    if (this.frames % 30 === 0) {
       this.score++;
     }
     ctx.font = "30px Helvetica";
@@ -109,7 +109,6 @@ checkWin(){
       
   }
 }
-
   
   checkGameOver() {
     const crashedL = this.enemiesLeft.some((enemy) => {

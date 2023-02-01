@@ -36,6 +36,8 @@ function showButton(){
     }
 
 
+
+
 /* function start1() {
     game.start();
     player = player

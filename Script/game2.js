@@ -60,7 +60,7 @@ class Game2 {
   }
  
 timer(){
-  if (this.frames % 10 === 0) {
+  if (this.frames % 50 === 0) {
     this.time --
   }
  
@@ -109,6 +109,7 @@ checkWin(){
       
   }
 }
+
 
   
   checkGameOver() {
