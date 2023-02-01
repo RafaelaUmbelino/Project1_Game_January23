@@ -14,19 +14,20 @@ let walkInstructions = document.getElementById("walkInstructions").style.display
 let player;
 let game;
 
-const myAudio = document.getElementById("myAudio").play();
-var button = document.getElementById("button");
-var audio = document.getElementById("player");
+let sound = new Audio("../docs/Audio/wav_8bit_ironhack.wav");
+sound.play();
 
-button.addEventListener("click", function(){
-  if(audio.paused){
-    audio.play();
-    button.innerHTML = "Pause";
-  } else {
-    audio.pause();
-    button.innerHTML = "Play";
-  }
-});
+
+document.getElementById('audioButton').addEventListener('click', function (evt) {
+    if ( sound.muted ) {
+      sound.muted = false
+      evt.target.innerHTML = 'audioButton'
+    }
+    else {
+      sound.muted = true
+      evt.target.innerHTML = 'audioButton'
+    }
+  })
 
 
 startButton.onclick = () => {

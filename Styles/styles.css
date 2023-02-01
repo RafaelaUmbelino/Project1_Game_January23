@@ -65,6 +65,21 @@
   .arrows-img {
     width: 150px;
   }
+
+  #audioButton{
+    background-color: transparent;
+  }
+
+  #muteImage{
+    width: 50px;
+  }
+  .changeImagePosition{
+    position: absolute;
+    margin-left: 1000px;
+    margin-bottom: 500px;
+    
+  }
+
   
   body button {
     font-size: 20px;
@@ -107,4 +122,6 @@
     margin-top: 40px;
     padding: 20px 40px;
   }
+
+   
 
