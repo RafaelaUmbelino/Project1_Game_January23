@@ -15,6 +15,7 @@ class Game2 {
       this.cone = [];
       this.score = 0;
       this.time = 60;
+      //this.coin = [];
       this.backgroundImage = new Image();
     }
 
@@ -27,6 +28,7 @@ class Game2 {
       this.frames++;
       this.clear();
       this.updateEnemies();
+      //this.updateCoin();
       this.player.newPos(); // Step 30
       this.player.draw();
       this.timer();
@@ -51,7 +53,7 @@ class Game2 {
   }
 
   updateScore() {
-    if (this.frames % 10 === 0) {
+    if (this.frames % 30 === 0) {
       this.score++;
     }
     ctx.font = "30px Helvetica";
@@ -109,6 +111,20 @@ checkWin(){
       
   }
 }
+//  updateCoin(){
+  
+//   for(let i = 0; i < this.coin.length; i++ ){
+//     this.coin[i].y += 1;
+//     this.coin[i].draw();
+// }
+
+//   let randomX = Math.floor(Math.random() * 600 - 300) + 300;
+
+//   if(this.frames % 120 === 0){
+//   this.coin.push(new Coin(randomX, 50, 40, 40, "blue", this.ctx));
+
+//  }
+// }
 
 
   

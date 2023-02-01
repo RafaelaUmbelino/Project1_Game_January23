@@ -13,6 +13,9 @@ let paragraph = document.getElementById("or");
 let player;
 let game;
 
+const myAudio = document.getElementById("myAudio");
+const buttons = document.getElementsByTagName("audio");
+
 
 startButton.onclick = () => {
      player = new Component(600, 500, 50, 60, ctx);  //(x, y, w, h, color, ctx)
