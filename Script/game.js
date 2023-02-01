@@ -124,27 +124,34 @@ checkWin(){
 
     if (crashedR || crashedL || crashedC) {
       this.stop()
-      ctx.globalAlpha = 0.8;
-      ctx.fillStyle = "white";
-      ctx.fillRect(50, 200, 400, 250);
-      ctx.font = "32px Helvetica";
-      ctx.fillStyle = "black";
-      ctx.fillText(`GAME OVER`, 150, 300);
-      ctx.fillStyle = "orange";
-      ctx.fillText(`Your final score`, 135, 350);
-      ctx.fillText(`${this.score}`, 230, 400);
+      ctx.beginPath();
+    
+      ctx.roundRect(175, 150, 350, 300, [40]);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.85)";
+      ctx.strokeStyle ="rgb(0,0,0)";
+      ctx.fill();
+      //ctx.fillRect(175, 150, 350 , 300);
+      ctx.fillStyle = "#0f0085";
+      ctx.fillText(`GAME OVER!`, 250, 230);
+      ctx.fillStyle = "#0f0085";
+      ctx.fillText(`Your final score:`, 240, 300);
+      ctx.fillText(`${this.score}`, 330, 350);
     }
   }
 
   youWon(){
-    ctx.fillStyle = "black";
-    ctx.fillRect(50, 200, 400, 250);
-    ctx.font = "32px Helvetica";
-    ctx.fillStyle = "red";
-    ctx.fillText(`YOU'RE ON TIME!`, 150, 300);
-    ctx.fillStyle = "white";
-    ctx.fillText(`Your final score`, 135, 350);
-    ctx.fillText(`${this.score}`, 230, 400);
+    ctx.beginPath();
+    
+    ctx.roundRect(175, 150, 350, 300, [40]);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.85)";
+    ctx.strokeStyle ="rgb(0,0,0)";
+    ctx.fill();
+    //ctx.fillRect(175, 150, 350 , 300);
+    ctx.fillStyle = "#0f0085";
+    ctx.fillText(`YOU'RE ON TIME!`, 220, 230);
+    ctx.fillStyle = "#0f0085";
+    ctx.fillText(`Your final score:`, 240, 300);
+    ctx.fillText(`${this.score}`, 330, 350);
     this.stop();
 
   }

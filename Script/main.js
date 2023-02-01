@@ -4,8 +4,9 @@ const canvas = document.getElementById("canvas")
 
 const ctx = canvas.getContext('2d');
 
-const startButton = document.getElementById("start");
-const startButton2 = document.getElementById("player2start");
+let startButton = document.getElementById("start");
+let startButton2 = document.getElementById("player2start");
+let restartButton = document.getElementById("restartButton").style.display= 'none';
 
 
 
@@ -15,18 +16,25 @@ let game;
 
 
 startButton.onclick = () => {
-     player = new Component(600, 350, 90, 90, ctx);  //(x, y, w, h, color, ctx)
+     player = new Component(600, 500, 90, 90, ctx);  //(x, y, w, h, color, ctx)
      game = new Game(ctx, 700, 600, player)
 
     game.start();
 }
 
 startButton2.onclick = () => {
-     player = new Component2(600, 350, 45, 75, ctx); //(x, y, w, h, color, ctx)
+     player = new Component2(600, 500, 45, 75, ctx); //(x, y, w, h, color, ctx)
      game = new Game2(ctx, 700, 600, player)
 
     game.start();
 }
+function showButton(){
+
+    restartButton = document.getElementById('restartButton').style.display='block';
+    startButton = document.getElementById("start").style.display= 'none';
+    startButton2 = document.getElementById("player2start").style.display= 'none';
+    }
+
 
 /* function start1() {
     game.start();
