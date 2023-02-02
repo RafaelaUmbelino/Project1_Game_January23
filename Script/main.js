@@ -108,7 +108,7 @@ document.addEventListener("keydown", (e) => {
 
         case "ArrowLeft": 
         if(player.x > 0){
-        player.x -= 40
+        player.x -= 50
         }
         break;
   
