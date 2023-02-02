@@ -43,7 +43,7 @@ startButton.onclick = () => {
 }
 
 startButton2.onclick = () => {
-     player = new Component2(600, 500, 45, 75, ctx); //(x, y, w, h, color, ctx)
+     player = new Component2(300, 500, 45, 75, ctx); //(x, y, w, h, color, ctx)
      game = new Game2(ctx, 700, 600, player)
      startButton = document.getElementById("start").style.display= 'none';
      startButton2 = document.getElementById("player2start").style.display= 'none';
