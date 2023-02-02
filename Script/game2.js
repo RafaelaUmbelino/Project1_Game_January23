@@ -172,7 +172,7 @@ checkWin(){
       ctx.strokeStyle ="rgb(0,0,0)";
       ctx.fill();
       //ctx.fillRect(175, 150, 350 , 300);
-      ctx.fillStyle = "#0f0085";
+      ctx.fillStyle = "red";
       ctx.fillText(`GAME OVER!`, 250, 230);
       ctx.fillStyle = "#0f0085";
       ctx.fillText(`Your final score:`, 240, 300);
