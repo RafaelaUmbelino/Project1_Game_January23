@@ -59,18 +59,29 @@ class Game2 {
     ctx.font = "30px Helvetica";
     ctx.fillStyle = "black";
     ctx.fillText(`Score: ${this.score}`, 80, 30);
-    const crashedCoin = this.coin.some((coin) => {
-      return this.player.crashWith(coin);
-    });
-    if (crashedCoin){
-      for(let i=0; i<this.coin.length; i++){
-        this.coin.splice(i, 1);
 
-      }
+
+    
+for (let i = 0; i < this.coin.length; i++){
+  if(this.player.crashWith(this.coin[i])){
+    this.coin.splice(i, 1)
+    this.score += 5;
+  }
+}
+
+
+    // const crashedCoin = this.coin.some((coin) => {
+    //   return this.player.crashWith(coin);
+    // });
+    // if (crashedCoin){
+    //   for(let i=0; i<this.coin.length; i++){
+    //     this.coin.splice(i, 1);
+
+    //   }
       
-      this.score += 5;
+     
 
-    }
+    
   }
  
 timer(){
