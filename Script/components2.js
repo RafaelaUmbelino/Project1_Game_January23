@@ -10,7 +10,7 @@ class Component2{
   this.speedX = 0;
   this.speedY = 0;
   this.img2 = new Image();
-  this.img2.src = "../docs/Imagegame1/cargame.png";
+  this.img2.src = "docs/Imagegame1/cargame.png";
   
   
   }

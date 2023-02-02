@@ -14,7 +14,7 @@ let walkInstructions = document.getElementById("walkInstructions").style.display
 let player;
 let game;
 
-let sound = new Audio("../docs/Audio/mp3_8bit_ironhack_.mp3");
+let sound = new Audio("docs/Audio/mp3_8bit_ironhack_.mp3");
 sound.play();
 
 

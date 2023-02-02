@@ -11,7 +11,7 @@ class Coin {
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src ="../docs/assets/gas.png"
+    this.img.src ="docs/assets/gas.png"
     };
 
     draw(){ // To draw the enemy (rectangle)

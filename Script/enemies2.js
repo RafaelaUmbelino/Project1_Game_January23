@@ -12,7 +12,7 @@ class Enemy2{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src = "../docs/assets/Player.png"
+    this.img.src = "docs/assets/Player.png"
     }
 
     draw(){ // To draw the enemy (rectangle)
@@ -48,7 +48,7 @@ class Enemy2{
     this.speedx = 0;
     this.speedy = 0;
     this.img = new Image ();
-    this.img.src ="../docs/assets/constructionHelmet.png"
+    this.img.src ="docs/assets/constructionHelmet.png"
     };
 
   }
